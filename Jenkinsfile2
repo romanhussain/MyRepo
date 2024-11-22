@@ -35,8 +35,8 @@ pipeline {
                  // withCredentials([usernamePassword(credentialsId: '83a975f4-53da-449c-adee-cb821370a22a', passwordVariable: 'Password', usernameVariable: 'Username')]) {
                  sh "sudo echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
                  sh "sudo docker image tag demo-image demo-image:${BUILD_NUMBER}"
-                 sh "sudo docker image tag demo-image salilkul87/demo-image:${BUILD_NUMBER}"
-                 sh "sudo docker image push salilkul87/demo-image:${BUILD_NUMBER}" 
+                 sh "sudo docker image tag demo-image mohdroman/demo-image:${BUILD_NUMBER}"
+                 sh "sudo docker image push mohdroman/demo-image:${BUILD_NUMBER}" 
                } 
              }  
           }
